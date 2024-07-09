@@ -9,7 +9,7 @@ def index(request):
     num_instance=BookInstance.objects.all().count()
 
     # Available books (status='a')
-    num_instances_available=BookInstance.objects.filter(status_exact='a').count
+    num_instances_available=BookInstance.objects.filter(status__exact='a').count
 
     # The 'all()' is implied by default.
 
